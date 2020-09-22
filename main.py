@@ -3,9 +3,15 @@
 
 #https://kr.indeed.com/jobs?q=python&radius=25&start=0
 from indeed import get_jobs as get_indeed_jobs
+from stackoverflow import get_jobs as get_so_jobs
+from save import save_to_file
 
+#indeed_jobs = get_indeed_jobs()
+
+
+so_jobs = get_so_jobs()
 indeed_jobs = get_indeed_jobs()
-print(indeed_jobs)
+jobs = so_jobs + indeed_jobs
 
-#최대 페이지 숫자(=max_page) 를 알았으니 max_page 개의 request를 만들어보자.
 
+save_to_file(jobs)
