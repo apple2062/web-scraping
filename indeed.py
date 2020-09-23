@@ -12,7 +12,7 @@ from bs4 import BeautifulSoup # 데이터 추출하는 애
 
 LIMIT =  50
 #URL = "https://www.indeed.com/jobs?q=python&limit=50"
-URL = "https://kr.indeed.com/%EC%B7%A8%EC%97%85?q=python"
+URL = "https://kr.indeed.com/%EC%B7%A8%EC%97%85?q=python&limit={LIMIT}"
 
 #제일 마지막 페이지 번호 수 알아내기
 def get_last_page():
